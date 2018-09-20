@@ -1,0 +1,18 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            // "command": "g++ src/main.cpp -g -w -Wall -IE:\\dev\\SDL2_MinGW_x32\\include -LE:\\dev\\SDL2_MinGW_x32\\lib -w -Wl,-subsystem,windows -lmingw32 -lSDL2main -lSDL2 -o builds/a",
+            "command": "python .vscode/generate_build.py",
+            "group":{
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher":"$gcc"
+        }
+    ]
+}
